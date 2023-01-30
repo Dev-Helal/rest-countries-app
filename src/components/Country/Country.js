@@ -2,7 +2,7 @@ import React from 'react';
 import './Country.css'
 
 const Country = (props) => {
-    const {area, region, name , population,flags,capital} = props.country;
+    const {area, region, name , population,flags,capital,languages} = props.country;
     console.log(props.country)
     return (
             <div className='country'>
@@ -12,6 +12,7 @@ const Country = (props) => {
                 <p>Population : {population}</p>
                 <p>Region : {region}</p>
                 <img src={flags.png} alt="" />
+                <p>Language : {languages ? languages : 'No Data Found'}</p>
             </div>
     );
 };
